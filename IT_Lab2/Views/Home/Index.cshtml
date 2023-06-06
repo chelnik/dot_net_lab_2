@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Student>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Class Leader</th>
+        <th>Group name</th>
+    </tr>
+    @foreach (var student in Model)
+    {
+                            <tr>
+                                <td>@student.Id</td>
+                                <td>@student.Name</td>
+                                <td>@student.Age</td>
+                                <td>@(student.ClassLeader ? "Yes" : "No")</td>
+                                <td>@student.Group.Name</td>
+                            </tr>
+    }
+</table>
